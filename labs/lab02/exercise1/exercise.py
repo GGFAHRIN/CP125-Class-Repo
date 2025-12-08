@@ -3,12 +3,12 @@
 
 def is_budget_sufficient(one_way_km, km_per_liter, price_per_liter, budget):
 
-    cost = km_per_liter * price_per_liter * one_way_km
+    cost = price_per_liter * ((one_way_km * 2) / km_per_liter)
     if cost <= budget:
-        return " Money is enough."
+        return "Money is enough."
     else:
-        return "Money does not enough."
+        return "Money is not enough."
     
 
-result = is_budget_sufficient(90, 12, 2, 6700)
+result = is_budget_sufficient(178, 2, 12, 670)
 print(f"Testing Road Trip Budgeter: {result}")
