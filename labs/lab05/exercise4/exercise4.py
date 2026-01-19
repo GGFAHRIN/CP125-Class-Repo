@@ -8,10 +8,13 @@ def filter_query_times(times):
     upper_limit = mean + std_dev
     
 
-    filter = [time for time in times if time <= upper_limit]
+    filter = []
+    for time in times :
+        if time <= upper_limit:
+            filter.append(time)
     filter.sort()
     return filter
-# Test
+
 query_times = [45, 52, 48, 180, 51, 47, 50, 12]
 result = filter_query_times(query_times)
 print(f"Filtered Times: {result}")  

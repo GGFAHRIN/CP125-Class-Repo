@@ -5,7 +5,6 @@ def clean_sessions(pool, sessions, dead_servers):
     for server, client in sessions:
         if server not in dead_set:
             alive_sessions.append((server, client))
-
     return alive_sessions
 
 
