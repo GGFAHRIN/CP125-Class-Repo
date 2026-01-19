@@ -3,7 +3,7 @@ def find_largest_drop(readings):
     largest = 0.0
     for i in range(1, len(readings)):
         drop = readings[i - 1] - readings[i]
-        if drop > largest_drop:
+        if drop > largest:
             largest = drop
     return largest
 

@@ -2,10 +2,10 @@
 def filter_query_times(times):
     mean = sum(times) / len(times)
     for time in times:
-        before_variance = (time - mean_time)
+        before_variance = (time - mean)
     variance = (before_variance ** 2) / len(times)
     std_dev = variance ** 0.5
-    upper_limit = mean_time + std_dev
+    upper_limit = mean + std_dev
     
 
     filter = [time for time in times if time <= upper_limit]
